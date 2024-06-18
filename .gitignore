@@ -1,3 +1,5 @@
+!pysidedeploy.spec
+
 ## PySide6
 /pyside*_build
 /pyside*_install
