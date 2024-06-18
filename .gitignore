@@ -1,5 +1,3 @@
-!pysidedeploy.spec
-
 ## PySide6
 /pyside*_build
 /pyside*_install
@@ -92,7 +90,6 @@ MANIFEST
 
 # PyInstaller
 *.manifest
-*.spec
 
 # Installer logs
 pip-log.txt
