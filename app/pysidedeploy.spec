@@ -11,7 +11,7 @@ exec_directory = ../calculator.exe
 # path to .pyproject project file
 project_file = 
 # application icon
-icon = C:\Users\vrjl2\Downloads\Luis\Py-Calculator\app\resources\images\logo.png
+icon = C:\Users\vrjl2\Downloads\Luis\Py-Calculator\app\res\images\logo.png
 
 [python]
 # python path
