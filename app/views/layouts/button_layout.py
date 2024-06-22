@@ -1,6 +1,5 @@
 from PySide6.QtWidgets import QGridLayout
 from typing import List
-from numexpr import evaluate
 from utils.display_utils import DisplayUtils
 from views.widgets.button_widget import ButtonWidget
 from views.widgets.icon_button_widget import IconButtonWidget

@@ -1,7 +1,4 @@
 from PySide6.QtGui import QIcon
-from utils.display_utils import DisplayUtils
-from views.calculator.widget import Layout
-from views.calculator.widget import Widget as CalculatorWidget
 from views.layouts.main_layout import MainLayout
 from qframelesswindow.windows import WindowsFramelessWindow
 from qframelesswindow.titlebar import StandardTitleBar
