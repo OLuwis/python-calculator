@@ -9,9 +9,6 @@ class DisplayLayout(QVBoxLayout):
     equationDisplay = DisplayWidget(10, Qt.AlignmentFlag.AlignVCenter)
     resultDisplay = DisplayWidget(15, Qt.AlignmentFlag.AlignTop)
 
-    equationDisplay.setText("Equation")
-    resultDisplay.setText("Result")
-
     self.addWidget(equationDisplay)
     self.addWidget(resultDisplay)
 

@@ -10,8 +10,8 @@ class MainLayout(QVBoxLayout):
     self.setSpacing(0)
 
     displayLayout = DisplayLayout()
-    displayUtils = DisplayUtils(displayLayout)
-    buttonLayout = ButtonLayout(displayUtils)
+    self.displayUtils = DisplayUtils(displayLayout)
+    buttonLayout = ButtonLayout(self.displayUtils)
 
     displayWidget = QWidget()
     buttonWidget = QWidget()
