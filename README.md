@@ -11,7 +11,7 @@ Inside the "app" folder, execute the following command to compile the applicatio
   pyside6-deploy
 ```
 
-### Licença
+### License
 
 [GPLv3](https://github.com/OLuwis/Python-Calculadora/blob/main/LICENSE)
 
