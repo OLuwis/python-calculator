@@ -1,4 +1,4 @@
-from re import match, split
+from re import match, split, search, sub
 from numexpr import evaluate
 from views.layouts.display_layout import DisplayLayout
 
@@ -29,10 +29,30 @@ class DisplayUtils():
     self.equationDisplay.setText("")
     self.resultDisplay.setText("")
 
-  def calculate(self):
+  def calculate(self, ):
     if not bool(match(r"\+|-|x|/|%|\.", self.resultDisplay.text()[-1])):
-      equation = self.resultDisplay.text().replace("x", "*")
-      result = int(evaluate(equation).item()) if float(evaluate(equation).item()).is_integer() else float(evaluate(equation).item())
+      self.equation = self.resultDisplay.text().replace("x", "*")
+      if "%" in self.equation:
+        self._percentage()
+      item = evaluate(self.equation).item()
+      result = int(item) if float(item).is_integer() else float(item)
       
       self.equationDisplay.setText(self.resultDisplay.text())
       self.resultDisplay.setText(str(result))
+
+  def _percentage(self):
+    equation = search(r"([0-9]+)%([0-9]+)", self.equation).group(0).split("%")
+    a, b = equation[0], equation[1]
+    item = evaluate("a / 100 * b",
+    {
+      "a": int(a) if float(a).is_integer() else float(a),
+      "b": int(b) if float(b).is_integer() else float(b)
+    })
+
+    result = int(item) if float(item).is_integer() else float(item)
+    self.equation = sub(r"([0-9]+)%([0-9]+)", str(result), self.equation)
+
+    print(self.equation)
+
+    if "%" in self.equation:
+      self._percentage()
